@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container{
+  width: 95%;
+  border-width: 5px;
+  border: 2px solid gray;
+  padding: 20px;
+  margin: 20px;
+}
+
+.required{
+  margin-left: 20px;
+}
+
+h3{
+  font-size: 25px;
+}
+
+h3,h4 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.red{
+  color: red;
+}
+
+.item{
+  margin-bottom: 30px;
+}
+
+.adress{
+  width: 90% !important;
+}
+
+.item input {
+  width: 40%;
+  box-sizing: border-box;
+  margin-right: 10px;
+}
+
+  

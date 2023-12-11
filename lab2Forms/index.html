@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styless.css">
+  <title>My Form</title>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <h3>General info</h3>
+      <div class="item">
+        <label for="name">First Name:</label>
+        <label class="red">(*)</label>
+        <input type="text" id="name" name="name" required>
+        <label for="name2">Last Name:</label>
+        <label class="red">(*)</label>
+        <input type="text" id="name2" name="name2" required>
+      </div>
+      <div class="item">
+        <label for="name">Email:</label>
+        <label class="red">(*)</label>
+        <input type="Email" id="name" name="Email" required>
+        <label for="phone">Phone number:</label>
+        <label class="red">(*)</label>
+        <input type="text" id="phone" name="phone" placeholder="e.g. 8830-8599" pattern="[0-9]{4}-[0-9]{4}" required>
+      </div>
+      <div class="item">
+        <label for="birthdate">Birthday:</label>
+        <input type="date" id="birthdate" name="birthdate">
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div>
+      <h3>Adress</h3>
+      <div class="item">
+        <label for="name">Adress:</label>
+        <label class="red">(*)</label>
+        <input class="adress" type="text" id="name" name="name" placeholder="523 Av, Doral" required>
+      </div>
+      <div class="item">
+        <label for="name">Line Address 1:</label>
+        <label class="red">(*)</label>
+        <input type="Email" id="name" name="Email" required>
+        <label for="phone">Line Address 2:</label>
+        <input type="text" id="phone" name="phone">
+      </div>
+      <div class="item">
+        <label for="name">City:</label>
+        <input type="Email" id="name" name="Email">
+        <label for="phone">State:</label>
+        <label class="red">(*)</label>
+        <input type="text" id="phone" name="phone" required>
+      </div>
+      <div class="item">
+        <label for="birthdate">ZIP Code:</label>
+        <label class="red">(*)</label>
+        <input type="text" id="phone" name="phone">
+        
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+          <option value="usa">United States</option>
+          <option value="cr">Costa Rica</option>
+          <option value="canada">Canada</option>
+          <option value="uk">United Kingdom</option>
+          <option value="australia">Australia</option>
+          <option value="germany">Germany</option>
+          <option value="france">France</option>
+          <option value="spain">Spain</option>
+          <option value="italy">Italy</option>
+          <option value="brazil">Brazil</option>
+          <option value="japan">Japan</option>
+        </select>
+      </div>
+    </div>
+    
+  </div>
+  <div class="required">
+    <label class="red">(*)</label>
+    <b>required fields</b>
+  </div>
+  
+</body>
+</html>
