@@ -1,0 +1,62 @@
+@if (songs.length === 0 && type == 'tracks') {
+    <div class="alert alert-warning">
+        No hay canciones por mostrar
+    </div>
+}@else{
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Photo</th>
+                <th>Album</th>
+                <th>Song</th>
+                <th>Preview</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (type == 'tracks') {
+                @for (song of songs; track $index) {
+                    <ng-container>
+                        @for (track of song.tracks; track $index) {
+                            <tr>
+                                <td>{{$index+1}}</td>
+                                <td>
+                                    <img [src]="track.album.images[0].url" height="80" width="80">
+                                </td>
+                                <td>{{track.album.name}}</td>
+                                <td>{{track.name}}</td>
+                                  <td>
+                                    <div id="embed-iframe">
+                                        <iframe [src]="getSafeUrl(track.id)" width="auto" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </ng-container>
+                  }
+            }
+            @if (type == 'album') {
+                @for (song of albumTracks!.tracks.items; track $index) {
+                    <ng-container >
+                        <tr>
+                            <td>{{$index+1}}</td>
+                            <td>
+                                <img src="{{albumTracks!.images[0].url}}" height="80" width="80">
+                            </td>
+                            <td>{{albumTracks!.name}}</td>
+                            <td>{{song.name}}</td>
+                              <td>
+                                <div id="embed-iframe">
+                                    <iframe [src]="getSafeUrl(song.id)" width="auto" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                                </div>
+                            </td>
+                        </tr>
+                    </ng-container>
+                }
+            }
+
+        </tbody>
+    </table>
+}
+
+<script src="https://open.spotify.com/embed/iframe-api/v1" async></script>

@@ -1,0 +1,35 @@
+
+  <mat-card class="example-card">
+    @if (!isAlbumSearch) {
+      <img mat-card-image src="{{albums!.images[0].url}}" alt="Photo of a Shiba Inu">
+      <mat-card-content class="d-flex justify-content-center">
+        <mat-card-title>{{albums!.name}}</mat-card-title>
+      </mat-card-content>
+      <mat-card-actions class="d-flex justify-content-center">
+          @for (item of albums!.artists; track item.id) {
+              <button mat-button (click)="save(item.id)"  routerLinkActive="router-link-active" >{{item.name}}</button>
+            }
+          
+      </mat-card-actions>
+      @if (!isAlbumSearch) {
+        <button mat-button [routerLink]="['/artist',albums!.artists[0].id,albums!.id, 'album']" routerLinkActive="router-link-active" >Go To Album</button>
+      }
+    }
+
+    @if (isAlbumSearch) {
+      <img mat-card-image src="{{albums!.album.images[0].url}}" alt="Photo of a Shiba Inu">
+      <mat-card-content class="d-flex justify-content-center">
+        <mat-card-title>{{albums!.name}}</mat-card-title>
+      </mat-card-content>
+      <mat-card-actions class="d-flex justify-content-center">
+        @for (item of albums!.artists; track item.id) {
+            <button mat-button (click)="save(item.id)"  routerLinkActive="router-link-active" >{{item.name}}</button>
+          }
+          
+        
+    </mat-card-actions>
+    <iframe [src]="getSafeUrl(albums!.id)" width="auto" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    }
+
+</mat-card>
+

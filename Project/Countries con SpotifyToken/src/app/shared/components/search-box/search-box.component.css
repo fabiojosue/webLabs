@@ -1,0 +1,15 @@
+input{
+    background-color: #212121;
+    border-color: #212121;
+    color: white;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+input::placeholder {
+    color: #535353;
+}
+input:focus {
+    background-color: #212121;
+    color: white;
+  }

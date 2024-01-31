@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <shared-search-box
+                [placeholder]="'Search Artist Albums'"
+                (onValue)="getSongs($event)"
+            ></shared-search-box>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card-container">
+            @for (item of tracks!.items; track item.id) {
+              <card-component [albums]="item" [isAlbumSearch]="true"></card-component>
+            }
+          </div>
+    </div>
+</div>

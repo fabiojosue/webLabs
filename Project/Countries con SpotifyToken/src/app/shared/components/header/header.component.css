@@ -1,0 +1,29 @@
+nav{
+    background-color: #212121 !important;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.active-link {
+    color: white !important;
+}
+.example-spacer {
+    flex: 1 1 auto !important;
+}
+a {
+    color: #535353 !important;
+}
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+        width: 100%;
+  }
+  
+  .flex-container .nav-link:last-child {
+    margin-left: auto;
+  }
+
+  .navbar-collapse {
+    align-items: flex-end;
+  }

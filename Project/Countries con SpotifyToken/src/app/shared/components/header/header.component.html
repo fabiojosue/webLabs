@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="container">
+    <a class="navbar-brand active-link" href="#">
+        <img src="assets/images/logo/Spotify_icon.svg.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+        SpotiApp
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav flex-container">
+        <a class="nav-link" [routerLink]="['/']" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" href="#">Home</a>
+        <a class="nav-link" [routerLink]="['/search/by-artists']" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" href="#">Search Album</a>
+        <a class="nav-link" [routerLink]="['/search/by-song']" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" href="#">Search Song</a>
+        <a class="nav-link" [routerLink]="['/login']" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" href="#"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="person_add"></mat-icon></a>
+        
+        <!-- <a class="nav-link" href="#">Pricing</a> -->
+    </div>
+    </div>
+</div>
+</nav>
